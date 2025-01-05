@@ -2,7 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 
 const MeetingType = ({bgColor, icon, heading, subTitle: subtitle, handleClick}: 
-                     {bgColor: string, icon: string, heading: string, subTitle: string,handleClick: (type: any) => void}) => {
+                     {bgColor: string, icon: string, heading: string, 
+                      subTitle: string,handleClick: () => void}) => {
   return (
     <div className={`${bgColor} w-full min-h-[270px] rounded-xl
                         flex flex-col justify-between py-6 pl-3 

@@ -1,7 +1,7 @@
 import { useCall, VideoPreview } from '@stream-io/video-react-sdk'
 import React, { useState } from 'react'
 import { Button } from './ui/button'
-import { BsCameraVideoFill, BsCameraVideoOffFill, BsTypeH1 } from "react-icons/bs";
+import { BsCameraVideoFill, BsCameraVideoOffFill } from "react-icons/bs";
 import { FaMicrophone, FaMicrophoneSlash } from "react-icons/fa6";
 import { useRouter } from 'next/navigation';
 

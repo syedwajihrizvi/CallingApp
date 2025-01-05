@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { Call, CallRecording } from '@stream-io/video-react-sdk'
 import Image from 'next/image'
 import { useToast } from '@/hooks/use-toast'
@@ -39,13 +38,13 @@ const MeetingCard = ({type, meeting}: {type: string, meeting: Call | CallRecordi
                     <div className='flex gap-2'>
                         <Button className='bg-customBlue font-semibold px-8 py-2'
                                 onClick={() => {
-                                    router.push(`/meeting/${meeting.id}`)
+                                    router.push(`/meeting/${(meeting as Call).id}`)
                                 }}>
                             Start
                         </Button>
                         <Button className='bg-dark-2 font-semibold'
                                 onClick={() => {
-                                    navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meeting.id}`)
+                                    navigator.clipboard.writeText(`${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${(meeting as Call).id}`)
                                     toast({title: 'Link copied'})
                                 }}>
                             <Image src="icons/copy.svg" width={15} height={15} alt="Copy Invitation"/>
@@ -59,13 +58,13 @@ const MeetingCard = ({type, meeting}: {type: string, meeting: Call | CallRecordi
                 return (
                     <div className='flex justify-between items-center w-full gap-5'>
                         <Button className='bg-customBlue font-semibold px-8 py-2 w-full'
-                                onClick={() => router.push(meeting.url)}>
+                                onClick={() => router.push((meeting as CallRecording).url)}>
                             <Image src='/icons/play.svg' width={20} height={20} alt="Play Recording"/>
                             Start
                         </Button>
                         <Button className='bg-dark-2 font-semibold w-full' 
                                 onClick={() => {
-                                    navigator.clipboard.writeText(meeting.url)
+                                    navigator.clipboard.writeText((meeting as CallRecording).url)
                                     toast({title: 'Link copied'})
                                 }}>
                             <Image src="icons/share.svg" width={15} height={15} alt="Copy Invitation"/>

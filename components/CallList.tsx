@@ -2,7 +2,6 @@
 
 import { useGetCalls } from '@/hooks/useGetCalls'
 import { Call, CallRecording } from '@stream-io/video-react-sdk'
-import { usePathname } from "next/navigation"
 import React, { useEffect, useState } from 'react'
 import MeetingCard from './MeetingCard'
 import Loader from './Loader'
@@ -54,8 +53,8 @@ const CallList = ({type}: {type: 'previous' | 'upcoming' | 'recordings'}) => {
 
   return (
     <div className='grid grid-cols-1 gap-5 xl:grid-cols-2'>
-      {calls && calls.length > 0 ? calls.map((meeting: Call | CallRecording) => (
-        <MeetingCard type={type} meeting={meeting}/>
+      {calls && calls.length > 0 ? calls.map((meeting: Call | CallRecording, index) => (
+        <MeetingCard key={index} type={type} meeting={meeting}/>
       )) : <h1 className='text-white text-lg'>{noCallsMessage}</h1>}
     </div>
   )
