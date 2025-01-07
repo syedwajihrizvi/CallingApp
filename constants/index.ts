@@ -26,7 +26,7 @@ export const sidebarLinks = [
     }
 ]
 
-export const logo = '/icons/logo.svg'
+export const logo = '/icons/logo.png'
 export const logoWithTitle = '/icons/yoom-logo.svg'
 export const toggler = '/icons/hamburger.svg'
 export const avatar5 = '/images/avatar-5.png'

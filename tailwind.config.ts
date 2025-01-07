@@ -55,7 +55,8 @@ export default {
 				2: '#161925',
 			},
 			customBlue: {
-				DEFAULT: '#0E78F9'
+				DEFAULT: '#0E78F9',
+				100: '#1E5EF8'
 			},
 			customOrange: {
 				DEFAULT: '#FF742E'
@@ -67,6 +68,12 @@ export default {
 			customPurple: {
 				DEFAULT: '#830EF9'
 
+			},
+			customGreen: {
+				DEFAULT: '#1EF89A'
+			},
+			customRed: {
+				DEFAULT: '#f81e5e'
 			},
 			highlight: {
 				DEFAULT: '#2BFA9A'

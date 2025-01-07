@@ -85,15 +85,15 @@ const MeetingTypesList = () => {
   return (
     <div>
         <section className='grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4 mt-6'>
-            <MeetingType bgColor='bg-customOrange' 
+            <MeetingType bgColor='bg-customGreen' 
                          icon={joinMeetingViaLink} heading="New Meeting" 
                         subTitle="Start an instant meeting"
                         handleClick={() => setMeetingType('newMeeting')}/>
-            <MeetingType bgColor='bg-customBlue' 
+            <MeetingType bgColor='bg-customRed' 
                         icon={plus} heading="Join Meeting" 
                         subTitle='Via invitation link'
                         handleClick={() => setMeetingType('joinMeeting')}/>
-            <MeetingType bgColor='bg-customPurple' 
+            <MeetingType bgColor='bg-customBlue-100' 
                         icon={scheduleMeetingIcon} heading="Schedule Meeting"
                         subTitle="Plan your meeting" 
                         handleClick={() => setMeetingType('scheduleMeeting')}/>
