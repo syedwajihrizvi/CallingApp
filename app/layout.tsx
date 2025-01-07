@@ -18,10 +18,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yoom",
+  title: "Cally",
   description: "Video calling app",
   icons: {
-    icon: '/icons/logo.svg'
+    icon: '/icons/logo.png'
   }
 };
 
@@ -35,7 +35,7 @@ export default function RootLayout({
         <ClerkProvider 
           appearance={{
           layout: {
-            logoImageUrl: '/icons/yoom-logo.svg'
+            logoImageUrl: '/icons/logo.png'
           },
           variables: {
             colorBackground: '#1C1F2E',
